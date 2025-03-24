@@ -8,9 +8,7 @@ import { CarImage } from "@/types";
 
 
 
-// interface CarImage {
-//     imageUrl: string;
-// }
+
 
 
 interface Car {
@@ -33,7 +31,7 @@ const CarItem: React.FC<CarItemProps> = ({ car }) => {
     
     return (
         <Link to={`/listing-details/${car?.id}`}>
-        <div className="rounded-xl bg-white border hover:shadow-md cursor-pointer  lg:h-[380px] lg:w-[300px] ">
+        <div className="rounded-xl bg-white border hover:shadow-md cursor-pointer h-full">
             <h2 className="absolute m-2 bg-green-500 px-2 rounded-full text-sm text-white">New</h2>
             <img src={car?.images[0]?.imageUrl} width={"100%"} height={250} className="rounded-t-xl h-[180px] object-cover" />
             <div className="p-4">

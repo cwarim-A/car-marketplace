@@ -41,11 +41,12 @@ const MostSearchedCar = () => {
     setCarList(resp)
   }
   return (
-    <div className="mx-18 md:mx-20 lg:mx-24"> 
+    
+    <div className="mx-10 md:mx-20 lg:mx-24 p-15 md:px-20 mb-15"> 
       <h2 className="font-bold text-2xl text-center mt-16 mb-7 md:text-3xl">Most Searched Cars</h2>
 
-      <Carousel>
-        <CarouselContent>
+      <Carousel className="relative">
+        <CarouselContent className="h-auto">
 
           {carList.map((car, index) => (
             <CarouselItem key={index} className="basis-1/1 md:basis-1/2 lg:basis-1/4">
@@ -53,8 +54,8 @@ const MostSearchedCar = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious />
-        <CarouselNext />
+        <CarouselPrevious className="absolute -left-10 top-1/2 -translate-y-1/2 z-10" />
+        <CarouselNext className="absolute -right-10 top-1/2 -translate-y-1/2 z-10" />
       </Carousel>
 
 
