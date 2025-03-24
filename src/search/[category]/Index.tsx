@@ -49,7 +49,7 @@ const SearchByCategory = () => {
                             <CarItem car={item} />
                         </div>
                     )) : 
-                    [1,2,3,4,5,6,7,8].map((Item,index)=>(
+                    [1,2,3,4,5,6,7,8].map((_Item,index)=>(
                         <div key={index} className="h-[320px] rounded-xl bg-slate-200 animate-pulse">
 
                         </div>

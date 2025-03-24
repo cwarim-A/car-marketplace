@@ -2,7 +2,7 @@ import Header from "@/components/Header"
 import { db } from "../../configs";
 import { useSearchParams } from "react-router"
 import { CarImages, CarListing } from "../../configs/schema";
-import { and, eq, lte } from "drizzle-orm";
+import { and, eq } from "drizzle-orm";
 import Service from "@/shared/Service";
 import { useEffect, useState } from "react";
 import Search from "@/components/Search";

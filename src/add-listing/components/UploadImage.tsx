@@ -20,7 +20,7 @@ interface UploadImageProps {
 
 const UploadImage:React.FC<UploadImageProps> = ({ triggerUploadImages, setLoading, carInfo }) => {
     const [selectedFileList, setSelectedFileList] = useState<File[]>([]);
-    const [uploadedUrls, setUploadedUrls] = useState<string[]>([]);
+    const [_uploadedUrls, setUploadedUrls] = useState<string[]>([]);
     const [oldImages, setOldImages] = useState<any[]>([]);
 
     useEffect(() => {
@@ -42,7 +42,7 @@ const UploadImage:React.FC<UploadImageProps> = ({ triggerUploadImages, setLoadin
         setSelectedFileList((prev) => [...prev, ...Array.from(files)]);
     };
 
-    const onImageRemove = async (image: any, index: number) => {
+    const onImageRemove = async (image: any, _index: number) => {
         if (image instanceof File) {
             // Remove from selectedFileList
             const result = selectedFileList.filter((item) => item !== image);
